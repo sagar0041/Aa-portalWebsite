@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="apple-touch-icon" sizes="180x180" href="nsdlFavicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="nsdlFavicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="nsdlFavicon/apple-touch-icon.png">
+    <link rel="manifest" href="nsdlFavicon/site.webmanifest">
+    <title>Account Aggregator</title>
+</head>
+
+<body>
+    <div id="navbar" class="overlay" style="margin-bottom: 100%;">
+        <!-- <a href="javascript:void(0);" onclick="closeNavbar()" class="close">&#9932;</a> -->
+        <span class="close" onclick="closeNavbar()">&#9932;</span>
+
+        <div class="overlay-content">
+            <a href="javascript:void(o);">Individual KYC</a>
+            <a href="javascript:void(o);">Bank Statement Analysis</a>
+            <a href="javascript:void(o);">Logout</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm fixed-top justify-content-around nav">
+        <img class="img-fluid nsdllogo" loading="lazy" src="/NSDL.png" alt="NSDL" srcset="" width="150px" height="14px">
+        <img class="img-fluid" loading="lazy" src="/NSDL.png" alt="NSDL" srcset="" width="150px" height="14px">
+        <span class="open" onclick="openNavbar()">&#9776;</span>
+    </nav>
+    <div class="sidebar-container">
+        <div class="sidebar-logo">
+            Menu
+        </div>
+        <ul class="sidebar-navigation" style="list-style-type: none;">
+            <li>
+                <a href="#">
+                    <i class="fas fa-file-signature p-2"></i>Individual KYC
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-university p-2"></i> Bank Statement <span style="padding: 36px;">Analysis</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt p-2"></i> Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-container">
+
+        <!-- <div class="container-fluid"> -->
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron main">
+            <div class="nsdl-name">NSDL e-Governance Account Aggregator Limited</div>
+        </div>
+
+        <!-- </div> -->
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-7 col-sm-7 col-md-8 col-xl-5">
+                    <!-- <div class="profile">
+                        <input type="file" class="my_file">
+                        <img class="profile-img rounded-circle " alt="100x100 " src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg " data-holder-rendered="true ">
+                        <span class="aa-name">Sagar Patil</span>
+                    </div> -->
+                    <div class="profile">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <label for="fileToUpload">
+                      <div class="profile-pic" style="background-image: url('https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg')">
+                          <span class="glyphicon glyphicon-camera"></span>
+                          <span>Change Image</span>
+                      </div>
+                      <span class="aa-name">Sagar Patil</span>
+                      </label>
+                            <input type="File" name="fileToUpload" id="fileToUpload">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-5 col-sm-5 col-md-4 offset-xl-4 col-xl-3">
+                    <div class="edit-profilebtn">
+                        <button type="button" class="edit-btn btn btn-secondary">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+                <div class="col-auto col-sm-auto col-md-auto">
+                    <span class="dashboard-subheading"><a href="/index.html"> Dashboard </a></span>
+                </div>
+                <div class="col-auto col-sm-auto col-md-auto">
+                    <span class="dashboard-subheading"><a href="/consent.html"> Consent </a></span>
+                </div>
+                <div class="col-auto col-sm-auto col-md-auto">
+                    <span class="dashboard-subheading"><a href="/linkedAccount.html"> Linked Accounts </a></span>
+                </div>
+                <div class="col-auto col-sm-auto col-md-auto">
+                    <span class="dashboard-subheading"><a href="/delinked.html"> De-LinkedAccounts </a></span>
+                </div>
+                <div class="col-auto col-sm-auto col-md-auto">
+                    <span class="dashboard-subheading"><a href="/consentReport.html"> Consent Report </a></span>
+                </div>
+                <hr class="style1">
+            </div>
+        </div>
+        <div class="container-fluid" style="margin-bottom:11%;">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-10 col-md-10 col-xl-10" style="margin-bottom: 20px;">
+                    <div class="box-1">
+                        <span class="total">Total</span>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-8 col-md-9 col-xl-9 box">
+                    <img class="menu-img img-fluid" loading="lazy" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="3%">
+                    <span class="menu-items">Consent</span>
+                </div>
+                <div class="offset-1 col-2 col-sm-2 col-md-1 col-xl-1 box">
+                    <div style="text-align: center;"><span align="center" class="count-items">8</span></div>
+                </div>
+
+                <div class="col-8 col-sm-8 col-md-9 col-xl-9 box">
+                    <img class="menu-img img-fluid" loading="lazy" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="3%">
+                    <span class="menu-items">Linked Accounts</span>
+                </div>
+                <div class="offset-1 col-2 col-sm-2 col-md-1 col-xl-1 box">
+                    <div style="text-align: center;"><span align="center" class="count-items">8</span></div>
+                </div>
+
+                <div class="col-8 col-sm-8 col-md-9 col-xl-9 box">
+                    <img class="menu-img img-fluid" loading="lazy" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="3%">
+                    <span class="menu-items">De-Linked Accounts</span>
+                </div>
+                <div class="offset-1 col-2 col-sm-2 col-md-1 col-xl-1 box">
+                    <div style="text-align: center;"><span align="center" class="count-items">8</span></div>
+                </div>
+
+                <div class="col-8 col-sm-8 col-md-9 col-xl-9 box">
+                    <img class="menu-img img-fluid" loading="lazy" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="3%">
+                    <span class="menu-items">Consent Reports</span>
+                </div>
+                <div class="offset-1 col-2 col-sm-2 col-md-1 col-xl-1 box">
+                    <div style="text-align: center;"><span align="center" class="count-items">8</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Yes no Link More Acount Modal -->
+    <div class="modal fade" id="LinkMoreAccountModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="LinkMoreAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container d-flex pl-0">
+                        <h5 class="modal-title ml-2" id="exampleModalLabel">Accounts</h5>
+                    </div>
+                    <div class="close-sign ">
+                        <div class="text-right" style="cursor: pointer;">
+                            <i class="fas fa-times" data-toggle="modal" data-target="#LinkMoreAccountModal" data-dismiss="modal"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body ">
+                    <p class="text-muted">Do you want to Link more A/Cs</p>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-light" onclick="refreshButton()" data-toggle="modal" data-target="#accountEntityModel" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-danger" onclick="refreshButton()" data-toggle="modal" data-target="#LinkMoreAccountModal" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Yes no Link More Acount Modal -->
+
+    <!-- account Modal -->
+    <div class="modal fade" id="accountEntityModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 2px solid black;">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                                <div class="consent-1">
+                                    <span class="total">Add Accounts</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                                <div class="close-sign">
+                                    <div class="text-right" style="cursor: pointer;">
+                                        <i class="fas fa-times" data-toggle="modal" data-target="#accountEntityModel" data-dismiss="modal"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- account entity modal  -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                                <div class="linkedAccountEntity">
+                                    <span class="select-name">Select Entity Type:</span>
+                                    <div class="entity-select2 form-group select-custom-select">
+                                        <select class="form-control select-custom" style="border: none !important;outline: none !important;
+                                        box-shadow: none !important;">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                                <div class="linkedAccountEntity">
+                                    <span class="select-name">Select Entity:</span>
+                                    <div class="entity-select1 form-group select-custom-select">
+                                        <select class="form-control select-custom" style="border: none !important;outline: none !important;
+                                        box-shadow: none !important;">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="addAccountBtn" class="nextButton">
+                            <button type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#addAccountModel">Next</button>
+                        </div>
+                        <div id="addAccountManuallyBtn" class="nextButton">
+                            <button type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#addAccountManuallyModel">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- account Modal over-->
+
+
+    <!-- add account Modal -->
+    <div class="modal fade" id="addAccountModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 2px solid black;">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-8 col-sm-8 col-md-8 col-xl-8">
+                                <div class="accountmanual">
+                                    <span onclick="addAccountManually()" class="manualaccount-text" data-dismiss="modal" data-toggle="modal" data-target="#accountEntityModel">Add Accounts Manually <i class="fas fa-plus-circle"></i></span>
+                                </div>
+                                <div class=" ">
+                                    <span class="mobile-text">Identifying accounts linked with your registered mobile number</span>
+                                </div>
+                                <div class=" ">
+                                    <span class="mobile-text">9082622521</span><span class="manualaccount-text">Change</span>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                <div class="close-sign">
+                                    <div class="text-right" style="cursor: pointer;">
+                                        <i id="closedisabled" class="fas fa-times" data-toggle="modal" data-target="#LinkMoreAccountModal" data-dismiss="modal"></i>
+                                    </div>
+                                </div>
+                                <div class="searchButton">
+                                    <button type="button" class="btn" onclick="searchButton()">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center" style="overflow: auto;">
+                            <div class="loader col-12 col-sm-12 col-md-12 col-xl-12">
+                                <ul>
+                                    <li> </li>
+                                    <li> </li>
+                                    <li> </li>
+                                    <li> </li>
+                                </ul>
+                            </div>
+                            <div class="account-list col-12 col-sm-12 col-md-12 col-xl-12" style="height: 300px;">
+                                <div class="container-fluid">
+                                    <div class="row justify-content-center">
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add account modal over-->
+
+    <!-- add account manually -->
+    <div class="modal fade" id="addAccountManuallyModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addAccountManuallyModelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 2px solid black;">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                                <div class="consent-1">
+                                    <span class="total">Add Accounts</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                                <div class="close-sign">
+                                    <div class="text-right" style="cursor: pointer;">
+                                        <i class="fas fa-times" data-toggle="modal" data-target="#addAccountManuallyModel" data-dismiss="modal"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- account entity modal  -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                                <div class="linkedAccountManualEntity">
+                                    <span class="entity-name2">Entity Name:</span>
+                                    <div class="entity-bank2">
+                                        <span class="bankmanual-name">HDFC Bank Ltd.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                                <div class="linkedAccountManualEntity">
+                                    <span class="entity-name1">Enter Unique Identification Number:</span>
+                                    <div class="entity-bank1">
+                                        <input class="form-control inputmanual-custom" placeholder="Account Number / Cust. Id/ PAN No." type="text" style="border: none !important;outline: none !important;
+                                        box-shadow: none !important;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="addAccountBtn" class="nextButton">
+                            <button type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#addAccountManuallyListModel">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add account manually over-->
+
+    <!-- add account list manually  -->
+    <div class="modal fade" id="addAccountManuallyListModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="addAccountManuallyListModelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 2px solid black;">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                                <div class="consent-1">
+                                    <span class="total">Add Accounts</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                                <div class="close-sign">
+                                    <div class="text-right" style="cursor: pointer;">
+                                        <i class="fas fa-times" data-toggle="modal" data-target="#addAccountManuallyListModel" data-dismiss="modal"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- account entity modal  -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center" style="overflow: auto;">
+                            <div class="account-list col-12 col-sm-12 col-md-12 col-xl-12" style="height: 300px;">
+                                <div class="container-fluid">
+                                    <div class="row justify-content-center">
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-xl-8" style="margin-bottom: 20px;">
+                                            <img class="menu-img img-fluid" src="/HDFC_Bank_Logo.jpg" alt="" srcset="" width="7%">
+                                            <span class="menu-items">2345*********5678</span>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                                            <div class="addAccountButton">
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#otpAccountLinkModel">Link</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add account manually list over-->
+
+    <!-- opt modal  -->
+    <div class="modal fade" id="otpAccountLinkModel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="otpAccountLinkModalLabel" aria-hidden="true" style="overflow: hidden !important;">
+        <div class="modal-dialog-otp modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-otp modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                                <div style="margin-left: 91%;">
+                                    <div style="cursor: pointer;">
+                                        <i class="fas fa-times" data-toggle="modal" data-target="#otpAccountLinkModel" data-dismiss="modal"></i>
+                                    </div>
+                                </div>
+                                <h6 class="mobilelink">Please enter the one time OTP <br> to verify your account</h6>
+                                <div class="mobilelink-text"> <span>A code has been sent to</span> <small>*******9897</small> </div>
+                                <div id="otp" class="inputs d-flex flex-row justify-content-center mt-4">
+                                    <input class="m-2 text-center form-control rounded" type="text" id="first" maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="second" maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="third" maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="fourth" maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="fifth" maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="sixth" maxlength="1" />
+                                </div>
+                                <div class="mt-4 optsubmitbtn"> <button class="btn btn-danger px-4 validate" onclick="accountlinksuccessfully()">Submit</button> </div>
+                                <div class="content d-flex justify-content-center align-items-center"> <span>Didn't get the code</span> <a href="#" class="text-decoration-none ms-3">Resend(1/3)</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- opt modal close  -->
+
+    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+    <!--AOS-->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> -->
+    <script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

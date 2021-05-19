@@ -1,0 +1,3220 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    list-style: none !important;
+    text-decoration: none !important;
+    color: grey !important;
+}
+
+.nav {
+    background-color: #F5F5F5;
+    box-shadow: 0 0.1875rem 0.5625rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.0625rem rgba(0, 0, 0, 0.4);
+    height: 57px;
+}
+
+.sidebar-container {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #7d201a;
+    color: #fff;
+    top: 56px;
+}
+
+.content-container {
+    padding-top: 20px;
+    margin-top: 32px;
+}
+
+.sidebar-logo {
+    padding: 10px 15px 10px 68px;
+    font-size: 20px;
+    background-color: #6f1c17;
+}
+
+.sidebar-navigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.sidebar-navigation li {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-navigation li a {
+    padding: 10px 0px 10px 20px;
+    display: block;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 16px;
+}
+
+.sidebar-navigation li a:active,
+.sidebar-navigation li a:hover,
+.sidebar-navigation li a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.sidebar-navigation li::before {
+    background-color: #973934;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+    -moz-transition: width 0.2s ease-in;
+    -ms-transition: width 0.2s ease-in;
+    -o-transition: width 0.2s ease-in;
+}
+
+.sidebar-navigation li:hover::before {
+    width: 100%;
+}
+
+.sidebar-navigation .header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #151515;
+    padding: 10px 15px 10px 30px;
+}
+
+.sidebar-navigation .header::before {
+    background-color: transparent;
+}
+
+.navbar {
+    min-width: 360px;
+}
+
+.content-container {
+    padding-left: 220px;
+    min-width: 360px;
+}
+
+.main {
+    padding: 23px 76px 11px 76px;
+    font-weight: 600;
+    background-color: #F5F5F5;
+    box-shadow: 0 10px 8px -6px #a18cd1;
+}
+
+.nsdl-name {
+    font-size: 35px;
+    text-align: center;
+    color: #8b231d;
+    font-weight: 700;
+}
+
+.aa-name {
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+.dashboard-subheading {
+    font-size: 22px;
+}
+
+.dashboard-subheading a {
+    color: #333 !important;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile {
+    position: relative;
+    top: -29px;
+}
+
+.profile-img {
+    width: 13%;
+    height: 100%;
+}
+
+.edit-profilebtn {
+    margin-top: 20px;
+    z-index: -1;
+}
+
+.edit-btn {
+    font-size: 20px !important;
+    background: rgb(200, 50, 50, 1.0) !important;
+}
+
+.edit-btn:hover {
+    background: #8b231d !important;
+}
+
+hr.style1 {
+    border-bottom: 3px solid #920000;
+    width: 95%;
+}
+
+.box-1 {
+    display: flex;
+    justify-content: end;
+}
+
+.total {
+    margin-right: 25px;
+    color: #8d4343;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.box {
+    background: #FFF1B5 !important;
+    padding: 6px 0px 2px 0px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 3px grey;
+    cursor: pointer;
+    background: rgba( 255, 241, 183, 0.55);
+    box-shadow: 0 5px 0px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20.0px);
+    -webkit-backdrop-filter: blur( 20.0px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    margin-bottom: 18px;
+}
+
+.box:hover {
+    transform: scale(1.02);
+    transition: all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.box-2 {
+    color: rgb(0, 0, 0);
+}
+
+.box-3 {
+    text-align: center;
+}
+
+.menu-items {
+    font-size: 20px;
+    line-height: 45px;
+    vertical-align: middle;
+    color: #8b231b;
+    font-weight: 600;
+}
+
+.count-items {
+    font-size: 36px;
+    color: #8b231b;
+    font-weight: 600;
+}
+
+
+/* consent */
+
+consent-1 {
+    display: flex;
+    justify-content: start;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-color: DodgerBlue; */
+    justify-content: space-around;
+}
+
+.flex-container>div {
+    background-color: #8d4343;
+    width: 150px;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+    line-height: 31px;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 11px 11px 0 0;
+    -webkit-border-radius: 11px 11px 0 0;
+    -moz-border-radius: 11px 11px 0 0;
+    -ms-border-radius: 11px 11px 0 0;
+    -o-border-radius: 11px 11px 0 0;
+}
+
+.flex-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-color: DodgerBlue; */
+    justify-content: space-around;
+}
+
+.flex-container2>div {
+    width: 150px;
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    border: 7px solid #8d4343;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 0px 0px 11px 11px;
+    -webkit-border-radius: 0px 0px 11px 11px;
+    -moz-border-radius: 0px 0px 11px 11px;
+    -ms-border-radius: 0px 0px 11px 11px;
+    -o-border-radius: 0px 0px 11px 11px;
+}
+
+.newConsent-table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+.table-header {
+    background-color: #ffd088;
+    vertical-align: middle;
+}
+
+.table-date {
+    border-left: 3px solid #ddc082;
+}
+
+.table-time {
+    border-left: 3px solid #ddc082;
+}
+
+.table-subheader {
+    background-color: #fff1b7;
+}
+
+
+/* linkedAccounts */
+
+.flex-container-accounts {
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-color: DodgerBlue; */
+    justify-content: space-around;
+}
+
+.flex-container-acccounts>div {
+    background-color: #8d4343;
+    width: 166px;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+    line-height: 31px;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    border-radius: 11px 11px 0 0;
+    -webkit-border-radius: 11px 11px 0 0;
+    -moz-border-radius: 11px 11px 0 0;
+    -ms-border-radius: 11px 11px 0 0;
+    -o-border-radius: 11px 11px 0 0;
+}
+
+.flex-container2-accounts {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.flex-container2-accounts>div {
+    width: 166px;
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border: 7px solid #8d4343;
+    border-radius: 0px 0px 11px 11px;
+    -webkit-border-radius: 0px 0px 11px 11px;
+    -moz-border-radius: 0px 0px 11px 11px;
+    -ms-border-radius: 0px 0px 11px 11px;
+    -o-border-radius: 0px 0px 11px 11px;
+}
+
+.accounts {
+    margin-bottom: 15px;
+    border: 4px solid #F5DEB3;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+
+.accounts:last-child {
+    margin-bottom: 10%;
+}
+
+.bank-details {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.9;
+}
+
+.bank-info {
+    margin-right: 30px;
+}
+
+.bank-linkedaccount {
+    border-left: 3px solid #ddc082;
+    padding-left: 20px;
+}
+
+.bank-activeConsent {
+    border-left: 3px solid #ddc082;
+    padding-left: 20px;
+}
+
+.bank-linkedaccount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Linked-accounts {
+    font-size: 16px;
+}
+
+.Linked-accounts:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.count {
+    text-align: center !important;
+}
+
+.delink {
+    font-size: 13px;
+    margin-right: 21px;
+    color: #079aff !important;
+    font-weight: 600;
+    cursor: pointer !important;
+}
+
+
+/* delinkedAccount */
+
+.accountLinkedRemove {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* consent report */
+
+.downloadbtn {
+    width: 166px;
+    height: 41px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    transition: .3s;
+    border-radius: 0px;
+    background: rgb(200, 50, 50);
+    padding: -12px;
+    font-size: 14px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+.period {
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 2.1;
+    font-weight: 600;
+    color: #8b231d;
+    margin-left: -30px;
+}
+
+select {
+    flex: 1;
+    padding: 0.5rem;
+    color: black;
+    cursor: pointer;
+    outline: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 137px;
+    height: 40px;
+    line-height: 2.5;
+    overflow: hidden;
+    border-radius: .25em;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    -ms-border-radius: .25em;
+    -o-border-radius: .25em;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 12px;
+    background: #bc3737;
+    color: #fbfbfb;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+    -webkit-transition: .25s all ease;
+    -moz-transition: .25s all ease;
+    -ms-transition: .25s all ease;
+    -o-transition: .25s all ease;
+}
+
+.report-download {
+    border: 3px solid #f8f1d3;
+    padding: 100px 0px 100px 0px;
+    margin: 16px !important;
+    background: #f8f1d3;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+}
+
+
+/* profile  */
+
+.profile-pic {
+    display: inline-block;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 1.5em;
+    padding-bottom: 4.5em;
+    font-size: 10px;
+}
+
+form input[type="file"] {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* modal */
+
+.modal-header {
+    border: none
+}
+
+.modal-footer {
+    border: none
+}
+
+.btn-danger {
+    background: #DD2750;
+    border: 1px solid #C43352
+}
+
+.btn-light {
+    border: 1px solid #E7E7E9
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+
+/* account  model linked*/
+
+.close-sign {
+    display: flex;
+    justify-content: end;
+}
+
+.linkedAccountEntity {
+    margin: 15px;
+}
+
+.select-custom-select {
+    border-radius: 0;
+    border: none;
+    border-bottom: 3px solid #8d4343;
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    height: 40px;
+    line-height: 2.5;
+    border-radius: .25em;
+    text-align: center;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    -ms-border-radius: .25em;
+    -o-border-radius: .25em;
+    box-shadow: none;
+}
+
+.select-custom-select:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select-custom-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 12px;
+    color: #bc3737;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+    -webkit-transition: .25s all ease;
+    -moz-transition: .25s all ease;
+    -ms-transition: .25s all ease;
+    -o-transition: .25s all ease;
+}
+
+.select-custom {
+    text-align: center;
+}
+
+.select-name {
+    font-size: 24px;
+    color: #8d4343;
+}
+
+.entity-select1 {
+    margin-left: 87px;
+    border-radius: 0;
+}
+
+.entity-select2 {
+    margin-left: 30px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.nextButton {
+    display: flex;
+    justify-content: end;
+    margin: 30px 15px 15px 0px;
+}
+
+.nextButton button {
+    height: 40px;
+    width: 126px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    /* background-image: linear-gradient(to right top, #f60b00c4, #a8534f);
+     */
+    background: linear-gradient(#c11c1c 0%, #ef2e2e 100%) !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nextButton button:hover {
+    /* background-image: linear-gradient(to right top, #8b231d, #f60b00c4); */
+    background: linear-gradient(#ef2e2e 0%, #c11c1c 100%) !important;
+    font-weight: 600;
+    color: #ffff;
+    font-size: 16px;
+}
+
+
+/* add account modal  */
+
+.accountmanual {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.manualaccount-text {
+    font-size: 16px;
+    color: #1818d8;
+    cursor: pointer;
+}
+
+.mobile-text {
+    font-size: 17px;
+    margin-right: 13px;
+}
+
+.searchButton {
+    display: flex;
+    justify-content: end;
+    margin: 40px 15px 0px 0px;
+}
+
+.searchButton button {
+    height: 36px;
+    width: 104px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    /* background-image: linear-gradient(to right top, #2400f0c4, #605ed8e8); */
+    background: linear-gradient(#c11c1c 0%, #ef2e2e 100%) !important;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.searchButton button:hover {
+    /* background-image: linear-gradient(to right top, #605ed8e8, #2400f0c4); */
+    background: linear-gradient(#ef2e2e 0%, #c11c1c 100%) !important;
+    font-weight: 600;
+    color: #ffff;
+    font-size: 16px;
+}
+
+.loader {
+    padding: 122px;
+    opacity: 0;
+}
+
+.loader ul {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+}
+
+.loader ul li {
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #be1919ed;
+    margin: 0 5px;
+    border-radius: 50%;
+    animation: animate 1.4s linear infinite;
+    -webkit-animation: animate 1.4s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    60% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+}
+
+.loader ul li:nth-child(1) {
+    animation-delay: -1.2s
+}
+
+.loader ul li:nth-child(2) {
+    animation-delay: -1.0s
+}
+
+.loader ul li:nth-child(3) {
+    animation-delay: -.8s
+}
+
+.loader ul li:nth-child(4) {
+    animation-delay: -0.6s
+}
+
+.account-list {
+    margin: 23px 40px 10px 0px !important;
+}
+
+.addAccountButton {
+    display: flex;
+    justify-content: end;
+    margin: 6px -30px 0px 19px;
+}
+
+.addAccountButton button {
+    height: 36px;
+    width: 96px;
+    cursor: pointer;
+    border: none;
+    border-radius: 249px;
+    /*background-image: linear-gradient(to right top, #2400f0c4, #605ed8e8);
+    */
+    background: linear-gradient(#361cc1 0%, #2e82ef 100%);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-border-radius: 249px;
+    -moz-border-radius: 249px;
+    -ms-border-radius: 249px;
+    -o-border-radius: 249px;
+}
+
+.addAccountButton button:hover {
+    /* background-image: linear-gradient(to right top, #605ed8e8, #2400f0c4); */
+    background: linear-gradient(#2e82ef 0%, #361cc1 100%);
+    font-weight: 600;
+    color: #ffff;
+    font-size: 15px;
+}
+
+
+/* enter otp  */
+
+.inputs input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #141515 !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0
+}
+
+.optsubmitbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.validate {
+    border-radius: 20px !important;
+    height: 39px;
+    /*background-image: linear-gradient(to right top, #f60b00c4, #ec4646) !important;
+    */
+    background: linear-gradient(#361cc1 0%, #2e82ef 100%) !important;
+    width: 108px;
+    color: #fff !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+    border: none !important;
+}
+
+.validate:hover {
+    /* background-image: linear-gradient(to right top, #a8534f, #f60b00c4) !important; */
+    background: linear-gradient(#2e82ef 0%, #361cc1 100%) !important;
+}
+
+.mobilelink {
+    color: #8b231d !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mobilelink-text {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-otp {
+    border: none !important;
+    /* box-shadow: 0px 51px 20px 0px #d2dae3 !important; */
+    z-index: 1 !important;
+}
+
+.content a {
+    color: #8b231d !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #8b231d !important;
+}
+
+
+/* addaccountmanually orginal */
+
+.entity-name2 {
+    font-size: 20px;
+    color: #8d4343;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 16%;
+    margin: 0px 0px 0px 25px;
+}
+
+.entity-name {
+    font-size: 22px;
+    color: #8d4343;
+}
+
+.entity-bank2 {
+    margin-left: 17px;
+    border-radius: 0;
+    width: 60%;
+    line-height: 2.5;
+    margin-top: 14px;
+    margin-bottom: 22px;
+    border: none;
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    text-align: left;
+}
+
+.bankmanual-name {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.entity-name1 {
+    font-size: 20px;
+    color: #8d4343;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 44%;
+    margin: 22px;
+}
+
+.entity-bank1 {
+    margin-left: 0px;
+    border-radius: 0;
+    width: 45%;
+    line-height: 2.5;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom: 3px solid #8d4343;
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.inputmanual-custom {
+    text-align: center;
+    font-size: 20px !important;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.inputmanual-custom::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 0.7em;
+}
+
+.inputmanual-custom:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 0.7em;
+}
+
+.inputmanual-custom::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 0.7em;
+}
+
+.inputmanual-custom:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 0.7em;
+}
+
+@media screen and (max-width: 320px) {
+    .nsdl-name {
+        font-size: 11px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 17px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 16px;
+    }
+    .sidebar-container {
+        display: none;
+    }
+    .nsdllogo {
+        display: none;
+    }
+    .open {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #8b231d;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 20px;
+        top: 2px;
+    }
+    .close {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #ff0d00;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 27px;
+        top: 3px;
+    }
+    .content-container {
+        padding-left: 0px;
+    }
+    .edit-profilebtn {
+        margin-top: 10px;
+    }
+    .profile {
+        position: relative;
+        top: -4px;
+        right: 14px;
+    }
+    .profile-img {
+        width: 25%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 12px !important;
+    }
+    .total {
+        margin-right: -16px;
+    }
+    .menu-img {
+        display: none;
+    }
+    .count-items {
+        font-size: 13px;
+        line-height: 44px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 16px;
+        line-height: 40px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 14px;
+        font-size: 7px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 31px;
+        font-size: 14px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 8px;
+    }
+    .bank-activeConsent {
+        padding-left: 8px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 11px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: left !important;
+    }
+    .bank-info {
+        margin-right: 5px;
+    }
+    .delink {
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .flex-container-acccounts>div {
+        background-color: #8d4343;
+        width: 286px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 31px;
+        font-size: 15px;
+        color: white;
+        font-weight: 600;
+    }
+    .flex-container2-accounts>div {
+        width: 287px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 44px;
+        font-size: 29px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        border: 7px solid #8d4343;
+    }
+    /* consent report */
+    .select::after {
+        display: none;
+    }
+    /* consentreport */
+    .select {
+        width: 157px;
+        height: 37px;
+        line-height: 2.3;
+        margin: 10px auto;
+    }
+    .download {
+        display: flex;
+        justify-content: center;
+    }
+    .downloadbtn {
+        width: 163px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .downloadbtn {
+        margin: 0px;
+    }
+    .period {
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        display: flex;
+        justify-content: center;
+    }
+    .report-download {
+        padding: 40px 0px 40px 0px;
+    }
+    /* profile */
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 66px;
+        width: 66px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 1px;
+        padding-bottom: 0;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .nsdl-name {
+        font-size: 16px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 17px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 16px;
+    }
+    .sidebar-container {
+        display: none;
+    }
+    .nsdllogo {
+        display: none;
+    }
+    .open {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #8b231d;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 20px;
+        top: 2px;
+    }
+    .close {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #ff0d00;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 27px;
+        top: 3px;
+    }
+    .content-container {
+        padding-left: 0px;
+    }
+    .edit-profilebtn {
+        margin-top: 10px;
+    }
+    .profile {
+        position: relative;
+        top: -4px;
+        right: 14px;
+    }
+    .profile-img {
+        width: 25%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 13px !important;
+    }
+    .total {
+        margin-right: -11px;
+    }
+    .menu-img {
+        display: none;
+    }
+    .count-items {
+        font-size: 13px;
+        line-height: 44px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 16px;
+        line-height: 40px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 130px;
+        max-width: 360px;
+        margin: 10px -1px 1px 5px;
+        text-align: center;
+        line-height: 17px;
+        font-size: 13px;
+        padding: 2px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 131px;
+        max-width: 360px;
+        margin: -1px -1px 2px 5px;
+        text-align: center;
+        line-height: 34px;
+        font-size: 22px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 8px;
+    }
+    .bank-activeConsent {
+        padding-left: 8px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 11px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: left !important;
+    }
+    .bank-info {
+        margin-right: 5px;
+    }
+    .delink {
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .flex-container-acccounts>div {
+        background-color: #8d4343;
+        min-width: 300px;
+        width: 300px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 31px;
+        font-size: 15px;
+        color: white;
+        font-weight: 600;
+    }
+    .flex-container2-accounts>div {
+        width: 300px;
+        min-width: 300px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 44px;
+        font-size: 29px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        border: 7px solid #8d4343;
+    }
+    /* consentreport */
+    .select {
+        width: 157px;
+        height: 37px;
+        line-height: 2.3;
+        margin: 10px auto;
+    }
+    .download {
+        display: flex;
+        justify-content: center;
+    }
+    .downloadbtn {
+        width: 163px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .downloadbtn {
+        margin: 0px;
+    }
+    .period {
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        display: flex;
+        justify-content: center;
+    }
+    .report-download {
+        padding: 40px 0px 40px 0px;
+    }
+    /* profile */
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 66px;
+        width: 66px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 1px;
+        padding-bottom: 0;
+        font-size: 10px;
+    }
+    /* account  model linked*/
+    .linkedAccountEntity {
+        margin: 0px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .select-custom-select {
+        width: 93%;
+        height: 40px;
+    }
+    .select-name {
+        font-size: 20px;
+        color: #8d4343;
+    }
+    .entity-select1 {
+        margin-left: 0px;
+        border-radius: 0;
+        margin-top: 14px;
+        margin-bottom: 22px;
+    }
+    .entity-select2 {
+        margin-left: 0px;
+        border-radius: 0;
+        margin-top: 14px;
+        margin-bottom: 22px;
+    }
+    .nextButton {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 29px auto;
+    }
+    /* add account modal  */
+    .accountmanual {
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+    .manualaccount-text {
+        font-size: 14px;
+        color: #1818d8;
+    }
+    .mobile-text {
+        font-size: 13px;
+        margin-right: 13px;
+    }
+    .searchButton {
+        display: flex;
+        justify-content: end;
+        margin: 48px 0px 0px 11px;
+    }
+    .searchButton button {
+        height: 34px;
+        font-size: 14px;
+    }
+    .searchButton button:hover {
+        font-size: 15px;
+    }
+    .account-list {
+        margin: 23px 40px 10px 0px !important;
+    }
+    .addAccountButton {
+        display: flex;
+        justify-content: end;
+        margin: 6px -30px 0px 19px;
+    }
+    .modal-dialog-otp {
+        margin: 0px 16px !important;
+        top: 54px;
+    }
+    /* accunt  */
+    .linkedAccountEntity {
+        margin: 0px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .entity-name1 {
+        font-size: 20px;
+        color: #8d4343;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        margin: 0px;
+    }
+    .entity-name2 {
+        font-size: 20px;
+        color: #8d4343;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        margin: 0px;
+    }
+    .entity-bank2 {
+        margin-left: 0px;
+        border-radius: 0;
+        width: 100%;
+        line-height: 2.5;
+        margin-top: 3px;
+        margin-bottom: 22px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        box-shadow: none;
+        text-align: center;
+    }
+    .bankmanual-name {
+        font-size: 22px;
+        color: black;
+        font-weight: 600;
+    }
+    .entity-bank1 {
+        margin-left: 8px;
+        border-radius: 0;
+        width: 100%;
+        line-height: 2.5;
+        margin-top: 14px;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 3px solid #8d4343;
+        position: relative;
+        display: inline-block;
+        box-shadow: none;
+    }
+    .inputmanual-custom {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* consent report */
+    .select::after {
+        display: none;
+    }
+    /* consentreport */
+    .select {
+        width: 160px;
+        height: 37px;
+        line-height: 2.3;
+    }
+    .download {
+        display: flex;
+        justify-content: center;
+    }
+    .downloadbtn {
+        width: 163px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .downloadbtn {
+        margin-top: 23px;
+    }
+    .period {
+        vertical-align: middle;
+        font-size: 20px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .nsdl-name {
+        font-size: 21px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 19px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 16px;
+    }
+    .sidebar-container {
+        display: none;
+    }
+    .nsdllogo {
+        display: none;
+    }
+    .open {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #8b231d;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 66px;
+        top: 3px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .close {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #ff0d00;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 66px;
+        top: 3px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .content-container {
+        padding-left: 0px;
+    }
+    .edit-profilebtn {
+        margin-top: 10px;
+        position: relative;
+        left: 5px;
+    }
+    .profile {
+        position: relative;
+        top: -3px;
+        right: 31px;
+    }
+    .profile-img {
+        width: 18%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 14px !important;
+    }
+    .total {
+        margin-right: -12px;
+        font-size: 18px;
+    }
+    .menu-img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .count-items {
+        font-size: 19px;
+        line-height: 46px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 20px;
+        line-height: 43px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 130px;
+        margin: 10px 1px 0px 5px;
+        text-align: center;
+        line-height: 18px;
+        font-size: 14px;
+        padding: 4px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 130px;
+        margin: 0px 1px 1px 5px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 9px;
+    }
+    .bank-activeConsent {
+        padding-left: 9px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 13px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: center !important;
+    }
+    .bank-info {
+        margin-right: 12px;
+    }
+    .delink {
+        font-size: 13px;
+    }
+    .flex-container-acccounts>div {
+        background-color: #8d4343;
+        min-width: 166px;
+        width: 166px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 31px;
+        font-size: 15px;
+        color: white;
+        font-weight: 600;
+    }
+    .flex-container2-accounts>div {
+        width: 166px;
+        min-width: 166px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        border: 7px solid #8d4343;
+    }
+    /* consentreport */
+    .select {
+        width: 116px;
+        height: 37px;
+        line-height: 2.3;
+    }
+    .downloadbtn {
+        width: 163px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .downloadbtn {
+        margin: 20px 0px;
+    }
+    .period {
+        vertical-align: middle;
+        font-size: 20px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        padding-top: 8px;
+    }
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 0.5em;
+        padding-bottom: 4.5em;
+        font-size: 10px;
+    }
+    form input[type="file"] {
+        display: none;
+        cursor: pointer;
+    }
+    /* add account modal  */
+    .accountmanual {
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+    .manualaccount-text {
+        font-size: 15px;
+        color: #1818d8;
+    }
+    .mobile-text {
+        font-size: 14px;
+        margin-right: 13px;
+    }
+    .searchButton {
+        display: flex;
+        justify-content: end;
+        margin: 48px 0px 0px 11px;
+    }
+    .searchButton button {
+        height: 34px;
+        font-size: 14px;
+    }
+    .searchButton button:hover {
+        font-size: 15px;
+    }
+    .account-list {
+        margin: 23px 40px 10px 0px !important;
+    }
+    .addAccountButton {
+        display: flex;
+        justify-content: end;
+        margin: 6px -30px 0px 19px;
+    }
+    .modal-dialog-otp {
+        margin: 0px 16px !important;
+        top: 54px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .modal-dialog-otp {
+        max-width: 481px !important;
+        top: 52px;
+        margin: 1.75rem auto !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nsdl-name {
+        font-size: 29px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 19px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 17px;
+    }
+    .sidebar-container {
+        display: none;
+    }
+    .nsdllogo {
+        display: none;
+    }
+    .open {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #8b231d;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 66px;
+        top: 3px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .close {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #ff0d00;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 66px;
+        top: 3px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .edit-profilebtn {
+        margin-top: 10px;
+        position: relative;
+        left: 40px;
+    }
+    .content-container {
+        padding-left: 0px;
+    }
+    .profile {
+        position: relative;
+        top: -4px;
+        right: 85px;
+    }
+    .profile-img {
+        width: 20%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 15px !important;
+    }
+    .total {
+        margin-right: -11px;
+    }
+    .menu-img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .count-items {
+        font-size: 19px;
+        line-height: 46px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 20px;
+        line-height: 43px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 130px;
+        margin: 10px 4px 0px 7px;
+        text-align: center;
+        line-height: 15px;
+        font-size: 12px;
+        padding: 3px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 130px;
+        margin: 0px 4px 0px 7px;
+        text-align: center;
+        line-height: 36px;
+        font-size: 22px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 20px;
+    }
+    .bank-activeConsent {
+        padding-left: 20px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 14px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: center !important;
+    }
+    .bank-info {
+        margin-right: 15px;
+    }
+    .delink {
+        font-size: 13px;
+    }
+    /* consent report */
+    .period {
+        font-size: 20px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        vertical-align: middle;
+    }
+    .download {
+        display: flex;
+        justify-content: center;
+    }
+    .downloadbtn {
+        margin: 24px 38px 20px 67px;
+    }
+    .report-download {
+        padding: 77px 0px 62px 0px;
+    }
+    /* consentreport */
+    .downloadbtn {
+        width: 163px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .downloadbtn {
+        margin: 28px 41px 24px 153px;
+    }
+    /* consent report */
+    .select {
+        width: 130px;
+        height: 37px;
+        line-height: 2.3;
+    }
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 0.5em;
+        padding-bottom: 4.5em;
+        font-size: 10px;
+    }
+    form input[type="file"] {
+        display: none;
+        cursor: pointer;
+    }
+    .modal-dialog-otp {
+        max-width: 400px !important;
+        /* New width for default modal */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nsdl-name {
+        font-size: 35px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 18px;
+    }
+    .edit-profilebtn {
+        margin-top: 10px;
+        position: relative;
+        left: 30px;
+    }
+    .sidebar-container {
+        display: none;
+    }
+    .nsdllogo {
+        display: none;
+    }
+    .open {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #8b231d;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 66px;
+        top: 3px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .close {
+        display: flex;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #ff0d00;
+        text-decoration: none;
+        transition: 0.5s;
+        position: absolute;
+        left: 66px;
+        top: 3px;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .content-container {
+        padding-left: 0px;
+    }
+    .profile {
+        position: relative;
+        top: -11px;
+        right: 112px;
+    }
+    .profile-img {
+        width: 15%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 16px !important;
+    }
+    .total {
+        margin-right: -32px;
+    }
+    .menu-img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .count-items {
+        font-size: 19px;
+        line-height: 46px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 20px;
+        line-height: 43px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 130px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 22px;
+        font-size: 13px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 130px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 38px;
+        font-size: 30px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 20px;
+    }
+    .bank-activeConsent {
+        padding-left: 20px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 14px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: center !important;
+    }
+    .bank-info {
+        margin-right: 30px;
+    }
+    .delink {
+        font-size: 14px;
+    }
+    /* consentreport */
+    .select {
+        width: 150px;
+        height: 37px;
+        line-height: 2.3;
+    }
+    .downloadbtn {
+        width: 163px;
+        height: 36px;
+        font-size: 12px;
+    }
+    /* consent report */
+    .downloadbtn {
+        margin: 28px 41px 24px 148px;
+    }
+    .period {
+        font-size: 19px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        vertical-align: middle;
+    }
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 83px;
+        width: 83px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 0.5em;
+        padding-bottom: 4.5em;
+        font-size: 10px;
+    }
+    form input[type="file"] {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .nsdl-name {
+        font-size: 40px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 22px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 19px;
+    }
+    .edit-profilebtn {
+        margin-top: 10px;
+        position: relative;
+        left: 19px;
+    }
+    .profile {
+        position: relative;
+        top: -11px;
+        right: 127px;
+    }
+    .profile-img {
+        width: 15%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 17px !important;
+    }
+    .total {
+        margin-right: -34px;
+    }
+    .menu-img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .count-items {
+        font-size: 19px;
+        line-height: 46px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 20px;
+        line-height: 43px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 140px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 15px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 140px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 43px;
+        font-size: 30px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 20px;
+    }
+    .bank-activeConsent {
+        padding-left: 20px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 14px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: center !important;
+    }
+    .bank-info {
+        margin-right: 30px;
+    }
+    .delink {
+        font-size: 14px;
+    }
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 92px;
+        width: 92px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 0.5em;
+        padding-bottom: 4.5em;
+        font-size: 10px;
+    }
+    form input[type="file"] {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .linkedAccountEntity {
+        margin: 15px;
+    }
+    .select-custom-select {
+        border-radius: 0;
+        border: none;
+        border-bottom: 3px solid #8d4343;
+        position: relative;
+        display: inline-block;
+        width: 60%;
+        height: 40px;
+        line-height: 2.5;
+        border-radius: .25em;
+        text-align: center;
+        -webkit-border-radius: .25em;
+        -moz-border-radius: .25em;
+        -ms-border-radius: .25em;
+        -o-border-radius: .25em;
+    }
+    .select-custom-select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 12px;
+        color: #bc3737;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .25s all ease;
+        -webkit-transition: .25s all ease;
+        -moz-transition: .25s all ease;
+        -ms-transition: .25s all ease;
+        -o-transition: .25s all ease;
+    }
+    .select-custom {
+        text-align: center;
+    }
+    .select-name {
+        font-size: 22px;
+        color: #8d4343;
+    }
+    .entity-select1 {
+        margin-left: 87px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .entity-select2 {
+        margin-left: 30px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .nextButton {
+        display: flex;
+        justify-content: end;
+        margin: 30px 15px 15px 0px;
+        text-align: center !important;
+    }
+    .nextButton button {
+        height: 40px;
+        width: 126px;
+        border-radius: 32px !important;
+        border: none;
+        border-radius: 5px;
+        /* background-image: linear-gradient(to right top, #f60b00c4, #a8534f); */
+        background: linear-gradient(#c11c1c 0%, #ef2e2e 100%) !important;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #fff;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.1s ease-in-out !important;
+        -webkit-transition: all 0.1s ease-in-out !important;
+        -moz-transition: all 0.1s ease-in-out !important;
+        -ms-transition: all 0.1s ease-in-out !important;
+        -o-transition: all 0.1s ease-in-out !important;
+        -webkit-border-radius: 32px !important;
+        -moz-border-radius: 32px !important;
+        -ms-border-radius: 32px !important;
+        -o-border-radius: 32px !important;
+        box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2) !important;
+        color: #fff !important;
+    }
+    .nextButton button:hover {
+        /* background-image: linear-gradient(to right top, #8b231d, #f60b00c4); */
+        /* background: linear-gradient(#2e82ef 0%, #361cc1 100%); */
+        background: linear-gradient(#ef2e2e 0%, #c11c1c 100%) !important;
+        font-weight: 600;
+        color: #ffff;
+        font-size: 16px;
+        /* opacity: 0.3 !important; */
+        box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+    .modal-dialog-otp {
+        max-width: 442px !important;
+        top: 46px;
+    }
+    /* addaccountmanually orginal */
+    .entity-name2 {
+        font-size: 20px;
+        color: #8d4343;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 16%;
+        margin: 0px 0px 0px 25px;
+    }
+    .entity-name {
+        font-size: 22px;
+        color: #8d4343;
+    }
+    .entity-bank2 {
+        margin-left: 17px;
+        border-radius: 0;
+        width: 60%;
+        line-height: 2.5;
+        margin-top: 14px;
+        margin-bottom: 22px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        box-shadow: none;
+        text-align: left;
+    }
+    .bankmanual-name {
+        font-size: 20px;
+        color: black;
+        font-weight: 600;
+    }
+    .entity-name1 {
+        font-size: 20px;
+        color: #8d4343;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 44%;
+        margin: 22px;
+    }
+    .entity-bank1 {
+        margin-left: 0px;
+        border-radius: 0;
+        width: 45%;
+        line-height: 2.5;
+        margin-top: 14px;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+        border-bottom: 3px solid #8d4343;
+        position: relative;
+        display: inline-block;
+        box-shadow: none;
+    }
+    .inputmanual-custom {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nsdl-name {
+        font-size: 39px;
+        text-align: center;
+        color: #8b231d;
+    }
+    .aa-name {
+        font-size: 25px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 18px;
+    }
+    .sidebar-container {
+        display: inline-block;
+    }
+    .nsdllogo {
+        display: flex;
+    }
+    .open,
+    .close {
+        display: none;
+    }
+    .edit-profilebtn {
+        margin-top: 16px;
+        left: 12px;
+    }
+    .content-container {
+        padding-left: 220px;
+    }
+    .profile {
+        position: relative;
+        top: -7px;
+        right: 90px;
+        z-index: 1 !important;
+    }
+    .profile-img {
+        width: 12%;
+        height: 100%;
+    }
+    .edit-btn {
+        font-size: 15px !important;
+    }
+    .total {
+        margin-right: -26px;
+    }
+    .menu-img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .count-items {
+        font-size: 19px;
+        line-height: 46px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 20px;
+        line-height: 43px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding: 0px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 140px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 23px;
+        font-size: 15px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 140px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 47px;
+        font-size: 30px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-activeConsent {
+        padding-left: 20px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 14px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: center !important;
+    }
+    .bank-info {
+        margin-right: 30px;
+    }
+    .delink {
+        font-size: 14px;
+    }
+    .overlay {
+        display: none;
+    }
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 93px;
+        width: 93px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 0.5em;
+        padding-bottom: 4.5em;
+        font-size: 10px;
+    }
+    form input[type="file"] {
+        display: none;
+        cursor: pointer;
+    }
+    /* add account modal  */
+    .accountmanual {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .manualaccount-text {
+        font-size: 16px;
+        color: #1818d8;
+    }
+    .mobile-text {
+        font-size: 17px;
+        margin-right: 13px;
+    }
+    .searchButton {
+        display: flex;
+        justify-content: end;
+        margin: 48px 15px 0px 0px;
+    }
+    .searchButton button {
+        height: 36px;
+        font-size: 15px;
+    }
+    .searchButton button:hover {
+        font-size: 16px;
+    }
+    .account-list {
+        margin: 23px 40px 10px 0px !important;
+    }
+    .addAccountButton {
+        display: flex;
+        justify-content: end;
+        margin: 6px -30px 0px 19px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nsdl-name {
+        font-size: 41px;
+        text-align: center;
+        color: #8b231d;
+        padding: 0px 150px 0px 150px;
+    }
+    .aa-name {
+        font-size: 32px;
+        vertical-align: middle;
+    }
+    .dashboard-subheading {
+        font-size: 22px;
+    }
+    .sidebar-container {
+        display: inline-block;
+    }
+    .open,
+    .close {
+        display: none;
+    }
+    .content-container {
+        padding-left: 220px;
+    }
+    .profile {
+        position: relative;
+        top: -15px;
+        right: 0px;
+        z-index: 1 !important;
+    }
+    .profile-img {
+        width: 16%;
+        height: 100%;
+    }
+    edit-profilebtn {
+        margin-top: 23px;
+    }
+    .edit-btn {
+        font-size: 16px !important;
+    }
+    .total {
+        margin-right: -39px;
+        font-size: 22px;
+    }
+    .menu-img {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .count-items {
+        font-size: 19px;
+        line-height: 46px;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .menu-items {
+        font-size: 21px;
+        line-height: 43px;
+        vertical-align: middle;
+        color: #8b231b;
+        font-weight: 600;
+    }
+    .box {
+        padding-top: 3px;
+        padding-bottom: 5px;
+    }
+    /* consent */
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container>div {
+        background-color: #8d4343;
+        width: 166px;
+        margin: 10px 10px 0px 10px;
+        text-align: center;
+        line-height: 24px;
+        font-size: 15px;
+    }
+    .flex-container2 {
+        display: flex;
+        flex-wrap: nowrap;
+        /* background-color: DodgerBlue; */
+        justify-content: space-around;
+    }
+    .flex-container2>div {
+        width: 166px;
+        margin: 0px 10px 0px 10px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 30px;
+    }
+    /* linked account */
+    .accounts {
+        margin-left: 18px;
+    }
+    .bank-details {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 0.9;
+    }
+    .bank-linkedaccount {
+        padding-left: 20px;
+    }
+    .bank-activeConsent {
+        padding-left: 20px;
+    }
+    .bank-linkedaccount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Linked-accounts {
+        font-size: 15px;
+    }
+    .Linked-accounts:first-child {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .count {
+        text-align: center !important;
+    }
+    .bank-info {
+        margin-right: 35px;
+    }
+    .delink {
+        font-size: 15px;
+    }
+    /* consent report */
+    .downloadbtn {
+        width: 166px;
+        height: 41px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        border: none;
+        transition: .3s;
+        border-radius: 0px;
+        background: rgb(200, 50, 50);
+        padding: -12px;
+        font-size: 14px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+    }
+    .period {
+        vertical-align: middle;
+        font-size: 20px;
+        line-height: 2.1;
+        font-weight: 600;
+        color: #8b231d;
+        margin-left: 0px;
+    }
+    .downloadbtn {
+        margin: 12px;
+    }
+    select {
+        flex: 1;
+        padding: 0.5rem;
+        color: black;
+        cursor: pointer;
+    }
+    .select {
+        position: relative;
+        display: flex;
+        width: 137px;
+        height: 40px;
+        line-height: 2.5;
+        overflow: hidden;
+        border-radius: .25em;
+        -webkit-border-radius: .25em;
+        -moz-border-radius: .25em;
+        -ms-border-radius: .25em;
+        -o-border-radius: .25em;
+    }
+    .select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 12px;
+        background: #bc3737;
+        color: #fbfbfb;
+        cursor: pointer;
+        pointer-events: none;
+        transition: .25s all ease;
+        -webkit-transition: .25s all ease;
+        -moz-transition: .25s all ease;
+        -ms-transition: .25s all ease;
+        -o-transition: .25s all ease;
+    }
+    .report-download {
+        border: 3px solid #f8f1d3;
+        padding: 100px 0px 100px 0px;
+        margin: 16px !important;
+        background: #f8f1d3;
+    }
+    .overlay {
+        display: none;
+    }
+    /* profile */
+    .profile-pic {
+        display: inline-block;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .profile-pic:hover {
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+    .profile-pic span {
+        display: inline-block;
+        padding-top: 1.5em;
+        padding-bottom: 4.5em;
+        font-size: 10px;
+    }
+}
+
+
+/* consent */
+
+.overlay {
+    position: fixed;
+    width: 0;
+    top: 55px;
+    background-color: #090000;
+    opacity: 0.8;
+    overflow-x: hidden;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 5;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.overlay-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    font-size: 19px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+.overlay-content a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+    display: block;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.overlay-content a:hover {
+    color: #ff9f1a;
+}
+
+.overlay-content a:hover:after {
+    width: 25%;
+}
